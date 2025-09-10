@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Signup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <h1 id="title">Login</h1>
+      <form>
+        <div class="input-group">
+          <div class="input-field" id="nameField">
+            <input type="text" placeholder="Name">
+          </div>
+          <div class="input-field">
+            <input type="email" placeholder="Email">
+          </div>
+          <div class="input-field">
+            <input type="password" placeholder="Password">
+          </div>
+        </div>
+        <p>Forgot password? <a href="#">Click here</a></p>
+        <div class="btn-field">
+          <button type="button" id="signupBtn">Sign Up</button>
+          <button type="button" id="loginBtn" class="disable">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const signupBtn = document.getElementById("signupBtn");
+    const loginBtn = document.getElementById("loginBtn");
+    const nameField = document.getElementById("nameField");
+    const title = document.getElementById("title");
+
+    signupBtn.onclick = function () {
+      nameField.style.display = "block";
+      title.innerHTML = "Sign Up";
+      signupBtn.classList.remove("disable");
+      loginBtn.classList.add("disable");
+    };
+
+    loginBtn.onclick = function () {
+      nameField.style.display = "none";
+      title.innerHTML = "Login";
+      signupBtn.classList.add("disable");
+      loginBtn.classList.remove("disable");
+    };
+  </script>
+</body>
+</html>
+

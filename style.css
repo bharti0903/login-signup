@@ -1,0 +1,107 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #70e1f5, #ffd194);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.form-box {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.form-box h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-field {
+  position: relative;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-field input:focus {
+  border-color: #70e1f5;
+  box-shadow: 0 0 5px rgba(112, 225, 245, 0.5);
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin: 15px 0;
+}
+
+p a {
+  color: #ff7e5f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-field {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-field button {
+  width: 48%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  transition: 0.3s ease;
+}
+
+.btn-field button.disable {
+  background: #ccc;
+  color: #333;
+}
+
+@media (max-width: 480px) {
+  .btn-field {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-field button {
+    width: 100%;
+  }
+}
